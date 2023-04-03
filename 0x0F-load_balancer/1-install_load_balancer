@@ -14,7 +14,7 @@ frontend ezana-frontend
 	mode http
 	defualt_backend ezana-backend
 backend ezana-backend
-	balance roundrobim
+	balance roundrobin
 	server 119364-web-01 100.25.165.88:80 check
 	server 119364-web-02 34.227.90.127:80 check
 "
