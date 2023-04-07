@@ -37,12 +37,12 @@ frontend  ezana-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend ehoneah-backend
+        default_backend ezana-backend
 
 frontend ezana-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.bestezana.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	default_backend ehoneah-backend
+	default_backend ezana-backend
 
 backend ezana-backend
         balance roundrobin
